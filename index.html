@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">🎨 Agência Criativa Web</div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <header>
+          <div class="logo">🎨 Agência Criativa Web</div>
+          <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+          <nav class="menu">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre Nós</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#depoimentos">Depoimentos</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </nav>
+        </header>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </header>
+
+    <main>
+      <section id="home" class="banner">
+        <h1>Bem-vindo à Agência Criativa Web</h1>
+        <p>
+          Soluções inovadoras em design digital para impulsionar seu negócio.
+        </p>
+        <button>Conheça nossos serviços</button>
+      </section>
+
+      <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>
+          Somos apaixonados por transformar ideias em experiências visuais
+          impactantes. Valorizamos criatividade, inovação e compromisso com o
+          cliente.
+        </p>
+      </section>
+
+      <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="grid-servicos">
+          <div class="servico">🎨 Design Gráfico</div>
+          <div class="servico">💻 Desenvolvimento Web</div>
+          <div class="servico">🚀 Branding e Identidade Visual</div>
+          <div class="servico">📱 UX/UI Design</div>
+        </div>
+      </section>
+
+      <section id="depoimentos">
+        <h2>Depoimentos</h2>
+        <blockquote>
+          "Trabalho impecável! Superou minhas expectativas." — João Silva
+        </blockquote>
+        <blockquote>
+          "Equipe muito profissional e criativa. Recomendo demais!" — Carla
+          Souza
+        </blockquote>
+      </section>
+
+      <section id="contato">
+        <h2>Contato</h2>
+        <p>Endereço: Rua Criativa, 123 - Cidade Design</p>
+        <p>Telefone: (11) 99999-9999</p>
+        <p>Email: contato@criativaweb.com</p>
+
+        <form>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Agência Criativa Web. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
