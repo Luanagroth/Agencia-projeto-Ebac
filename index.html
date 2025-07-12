@@ -8,43 +8,34 @@
   </head>
 
   <body>
-    <header>
-      <div class="logo">🎨 Agência Criativa Web</div>
-      <nav class="menu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#contato">Contato</a></li>
+    <header class="header">
+      <div class="header__logo">🎨 Agência Criativa Web</div>
+
+      <button class="header__menu-toggle" aria-label="Abrir menu">☰</button>
+
+      <nav>
+        <ul class="header__menu">
+          <li><a href="#home" class="header__menu-link">Home</a></li>
+          <li><a href="#sobre" class="header__menu-link">Sobre Nós</a></li>
+          <li><a href="#servicos" class="header__menu-link">Serviços</a></li>
+          <li>
+            <a href="#depoimentos" class="header__menu-link">Depoimentos</a>
+          </li>
+          <li><a href="#contato" class="header__menu-link">Contato</a></li>
         </ul>
-        <header>
-          <div class="logo">🎨 Agência Criativa Web</div>
-          <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-          <nav class="menu">
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#sobre">Sobre Nós</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#depoimentos">Depoimentos</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </nav>
-        </header>
       </nav>
-      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
     </header>
 
     <main>
       <section id="home" class="banner">
-        <h1>Bem-vindo à Agência Criativa Web</h1>
-        <p>
+        <h1 class="banner__title">Bem-vindo à Agência Criativa Web</h1>
+        <p class="banner__text">
           Soluções inovadoras em design digital para impulsionar seu negócio.
         </p>
-        <button>Conheça nossos serviços</button>
+        <button class="banner__button">Conheça nossos serviços</button>
       </section>
 
-      <section id="sobre">
+      <section id="sobre" class="section section--sobre">
         <h2>Sobre Nós</h2>
         <p>
           Somos apaixonados por transformar ideias em experiências visuais
@@ -53,9 +44,9 @@
         </p>
       </section>
 
-      <section id="servicos">
+      <section id="servicos" class="section">
         <h2>Serviços</h2>
-        <div class="grid-servicos">
+        <div class="servicos__grid">
           <div class="servico">🎨 Design Gráfico</div>
           <div class="servico">💻 Desenvolvimento Web</div>
           <div class="servico">🚀 Branding e Identidade Visual</div>
@@ -63,39 +54,56 @@
         </div>
       </section>
 
-      <section id="depoimentos">
+      <section id="depoimentos" class="section">
         <h2>Depoimentos</h2>
-        <blockquote>
+        <blockquote class="depoimentos__blockquote">
           "Trabalho impecável! Superou minhas expectativas." — João Silva
         </blockquote>
-        <blockquote>
+        <blockquote class="depoimentos__blockquote">
           "Equipe muito profissional e criativa. Recomendo demais!" — Carla
           Souza
         </blockquote>
       </section>
 
-      <section id="contato">
+      <section id="contato" class="section">
         <h2>Contato</h2>
         <p>Endereço: Rua Criativa, 123 - Cidade Design</p>
         <p>Telefone: (11) 99999-9999</p>
         <p>Email: contato@criativaweb.com</p>
 
-        <form>
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
+        <form class="form">
+          <label for="nome" class="form__label">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="form__input"
+            required
+          />
 
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required />
+          <label for="email" class="form__label">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form__input"
+            required
+          />
 
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" required></textarea>
+          <label for="mensagem" class="form__label">Mensagem:</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            class="form__textarea"
+            required
+          ></textarea>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" class="form__button">Enviar</button>
         </form>
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <p>© 2025 Agência Criativa Web. Todos os direitos reservados.</p>
     </footer>
     <script src="script.js"></script>

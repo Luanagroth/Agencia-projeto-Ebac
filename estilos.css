@@ -23,8 +23,8 @@ body {
   margin: 0 auto;
 }
 
-/* HEADER */
-header {
+/* ========== HEADER ========== */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +33,7 @@ header {
   flex-wrap: wrap;
 }
 
-.logo {
+.header__logo {
   font-size: 2.4rem;
   font-weight: 700;
   color: #2a2a2a;
@@ -41,7 +41,7 @@ header {
   user-select: none;
 }
 
-.menu-toggle {
+.header__menu-toggle {
   display: none;
   font-size: 3rem;
   background: none;
@@ -50,14 +50,16 @@ header {
   color: #2a2a2a;
 }
 
-.menu ul {
+.header__menu {
   list-style: none;
   display: flex;
   gap: 2.5rem;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
-.menu a {
+.header__menu-link {
   text-decoration: none;
   color: #2a2a2a;
   font-weight: 500;
@@ -66,7 +68,7 @@ header {
   position: relative;
 }
 
-.menu a::after {
+.header__menu-link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -77,17 +79,17 @@ header {
   transition: width 0.3s ease;
 }
 
-.menu a:hover::after,
-.menu a:focus::after {
+.header__menu-link:hover::after,
+.header__menu-link:focus::after {
   width: 100%;
 }
 
-.menu a:hover,
-.menu a:focus {
+.header__menu-link:hover,
+.header__menu-link:focus {
   color: #3498db;
 }
 
-/* BANNER */
+/* ========== BANNER ========== */
 .banner {
   background-color: #d0f0fd; /* azul pastel */
   color: #1b1b1b;
@@ -99,16 +101,18 @@ header {
   margin: 4rem auto;
 }
 
-.banner h1 {
+.banner__title {
   color: #1b1b1b;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
 }
 
-.banner p {
+.banner__text {
   color: #333;
+  margin-bottom: 2rem;
 }
 
-.banner button {
+.banner__button {
   background-color: #3498db;
   color: white;
   border: none;
@@ -120,34 +124,28 @@ header {
   font-weight: 600;
 }
 
-.banner button:hover,
-.banner button:focus {
+.banner__button:hover,
+.banner__button:focus {
   background-color: #2575fc;
 }
 
-/* SECTIONS */
-section#sobre,
-section#servicos,
-section#depoimentos,
-section#contato {
+/* ========== SECTIONS ========== */
+.section {
   max-width: 900px;
   margin: 6rem auto;
   padding: 0 2rem;
   color: #3a3a3a;
 }
 
-section#sobre p {
+.section--sobre p {
   font-size: 1.8rem;
   line-height: 1.6;
   margin-top: 1rem;
   color: #555;
   max-width: 650px;
 }
-section {
-  margin: 6rem 0;
-}
 
-h2 {
+.section h2 {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
@@ -157,8 +155,8 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-/* SERVIÇOS COM GRID */
-.grid-servicos {
+/* ========== SERVIÇOS COM GRID ========== */
+.servicos__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 3rem;
@@ -182,8 +180,8 @@ h2 {
   box-shadow: 0 10px 20px rgba(37, 117, 252, 0.3);
 }
 
-/* DEPOIMENTOS */
-blockquote {
+/* ========== DEPOIMENTOS ========== */
+.depoimentos__blockquote {
   background-color: #f4f7ff;
   border-left: 5px solid #3498db;
   padding: 2rem 2.5rem;
@@ -196,22 +194,22 @@ blockquote {
   user-select: none;
 }
 
-/* FORMULÁRIO */
-form {
+/* ========== FORMULÁRIO ========== */
+.form {
   max-width: 55rem;
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
 }
 
-label {
+.form__label {
   font-weight: 600;
   margin-bottom: 0.4rem;
   color: #333;
 }
 
-input,
-textarea {
+.form__input,
+.form__textarea {
   padding: 1.2rem 1.5rem;
   font-size: 1.6rem;
   border: 1.5px solid #ccc;
@@ -221,14 +219,14 @@ textarea {
   font-family: inherit;
 }
 
-input:focus,
-textarea:focus {
+.form__input:focus,
+.form__textarea:focus {
   outline: none;
   border-color: #3498db;
   box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
 }
 
-button {
+.form__button {
   background-color: #3498db;
   color: #fff;
   padding: 1.4rem 2.4rem;
@@ -241,14 +239,14 @@ button {
   align-self: flex-start;
 }
 
-button:hover,
-button:focus {
+.form__button:hover,
+.form__button:focus {
   background-color: #2575fc;
   outline: none;
 }
 
-/* RODAPÉ */
-footer {
+/* ========== RODAPÉ ========== */
+.footer {
   text-align: center;
   font-size: 1.4rem;
   padding: 3rem 0 6rem;
@@ -256,36 +254,36 @@ footer {
   user-select: none;
 }
 
-/* RESPONSIVIDADE */
+/* ========== RESPONSIVIDADE ========== */
 @media (max-width: 768px) {
   body {
     padding: 0 1.5rem;
   }
 
-  header {
+  .header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
   }
 
-  .menu ul {
+  .header__menu {
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  .banner h1 {
+  .banner__title {
     font-size: 2.8rem;
   }
 
-  .banner p {
+  .banner__text {
     font-size: 1.6rem;
   }
 
-  .grid-servicos {
+  .servicos__grid {
     grid-template-columns: 1fr;
   }
 
-  form {
+  .form {
     max-width: 100%;
   }
 }
@@ -295,12 +293,55 @@ footer {
     padding: 8vh 1rem;
   }
 
-  h2 {
+  .section h2 {
     font-size: 2.2rem;
   }
 
-  button {
+  .form__button {
     width: 100%;
     padding: 1.4rem 0;
+  }
+}
+/* Esconder menu no mobile */
+.header__menu {
+  display: none;
+}
+
+/* Quando o menu tiver a classe ativo, mostrar */
+.header__menu.ativo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* Esconder menu no mobile */
+.header__menu {
+  display: flex; /* para desktop, menu fica visível */
+  gap: 2.5rem;
+}
+
+/* Esconder menu no mobile */
+@media (max-width: 768px) {
+  .header__menu {
+    display: none; /* Esconde o menu no mobile */
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  /* Mostrar menu quando ativo */
+  .header__menu.ativo {
+    display: flex;
+  }
+
+  /* Mostrar botão toggle no mobile */
+  .header__menu-toggle {
+    display: block;
+  }
+}
+
+/* No desktop esconder o botão */
+@media (min-width: 769px) {
+  .header__menu-toggle {
+    display: none;
   }
 }
