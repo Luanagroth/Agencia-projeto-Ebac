@@ -1,0 +1,61 @@
+@use "variaveis";
+@use "mixins";
+
+// Aqui vai o layout geral (ex: .header, .footer, .banner, .section)
+
+.header {
+  @include mixins.flex(space-between);
+  padding: 2rem 0;
+  border-bottom: 1px solid #e0e0e0;
+
+  &__logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    letter-spacing: 1px;
+    user-select: none;
+  }
+
+  &__menu-toggle {
+    display: none;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2a2a2a;
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+
+    &-link {
+      text-decoration: none;
+      color: #2a2a2a;
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: variaveis.$cor-primaria;
+        transition: width 0.3s ease;
+      }
+
+      &:hover,
+      &:focus {
+        color: variaveis.$cor-primaria;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

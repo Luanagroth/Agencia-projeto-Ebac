@@ -1,0 +1,26 @@
+@use "variaveis";
+@use "mixins";
+
+.banner {
+  background-color: #d0f0fd;
+  text-align: center;
+  padding: 8vh 2rem;
+  margin: 4rem auto;
+  max-width: 900px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+  &__title {
+    color: #1b1b1b;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    color: variaveis.$cor-cinza;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    @include mixins.botao-padrao;
+  }
+}

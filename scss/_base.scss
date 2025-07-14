@@ -1,0 +1,25 @@
+@use "variaveis";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: variaveis.$font-padrao;
+  background-color: variaveis.$cor-fundo;
+  color: variaveis.$cor-texto;
+}
+
+body {
+  font-size: variaveis.$tamanho-base;
+  line-height: 1.6;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
